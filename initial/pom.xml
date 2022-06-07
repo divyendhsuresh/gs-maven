@@ -13,6 +13,23 @@
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+	    <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+		<!-- tag::junit[] -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- end::junit[] -->
+	</dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -38,4 +55,20 @@
             </plugin>
         </plugins>
     </build>
+
+
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>a0ssnp6uhatgi-artifactory-primary-0-releases</name>
+            <url>https://diyendh.jfrog.io/artifactory/sample-libs-release</url>
+        </repository>
+                    <snapshotRepository>
+                <id>snapshots</id>
+                <name>a0ssnp6uhatgi-artifactory-primary-0-snapshots</name>
+                <url>https://diyendh.jfrog.io/artifactory/sample-libs-snapshot</url>
+            </snapshotRepository>
+        </distributionManagement>
+
 </project>
